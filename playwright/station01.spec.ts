@@ -1,8 +1,8 @@
-/**
- * # 「リストを作ろう！」 - HTML List
- */
 
-import { test, expect } from '@playwright/test'
+// 「リストを作ろう！」 - HTML List
+
+
+import { test, expect } from '@playwright/test' 
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/station1.html')
