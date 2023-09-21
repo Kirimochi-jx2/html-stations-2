@@ -32,15 +32,23 @@ test('<ul>が存在する', async ({ page }) => { // テストの実行
   await expect(page).toHaveSelector('ul') // expectはテストの期待値を設定する
 }) // toHaveSelectorは指定したセレクタが存在するかを確認する
 
-test('<li>で囲われた「りんご」、「ばなな」、「ぶどう」がそれぞれ表示されている', async ({ // テストの実行
-  page, // pageはブラウザのページ
-}) => { 
-  // ul > li は ulの子要素のliを取得するセレクタ
-  const lis = await page.$$('ul > li') // $$は複数の要素を取得する
-  const names = ['りんご', 'ばなな', 'ぶどう'] // 期待する名前
-  const liTexts = await Promise.all(lis.map(li => li.textContent())) // mapは配列の要素を変換する
+test('<li>で囲われた「りんご」、「ばなな」、「ぶどう」がそれぞれ表示されている', async ({ page }) => {  
+  const list = await page.$$('li') // $$は指定したセレクタに一致する要素を全て取得する
+  await expect(list[0]).toHaveText('りんご') // toHaveTextは指定した要素のテキストが一致するかを確認する
+  await expect(list[1]).toHaveText('ばなな')
+  await expect(list[2]).toHaveText('ぶどう')
+}
+)
 
-  names.forEach(name => { // forEachは配列の要素を順番に処理する
-    expect(liTexts).toContain(name) // expectはテストの期待値を設定する
-  })
-})
+// test('<li>で囲われた「りんご」、「ばなな」、「ぶどう」がそれぞれ表示されている', async({ // テストの実行
+//   page, // pageはブラウザのページ
+// }) => { 
+//   // ul > li は ulの子要素のliを取得するセレクタ
+//   const lis = await page.$$('ul > li') // $$は複数の要素を取得する
+//   const names = ['りんご', 'ばなな', 'ぶどう'] // 期待する名前
+//   const liTexts = await Promise.all(lis.map(li => li.textContent())) // mapは配列の要素を変換する
+
+//   names.forEach(name => { // forEachは配列の要素を順番に処理する
+//     expect(liTexts).toContain(name) // expectはテストの期待値を設定する
+//   })
+// })
