@@ -1,25 +1,23 @@
 import { expect, test } from '@playwright/test'
 
 
-//  floatを使ってレイアウトを作ろう！」 - float
-#red {
+//  floatを使ってレイアウトを作ろう！」 - floatを使ってレイアウトを作ろう！ | CodeGrid
+
+div {
   width: 100px;
   height: 100px;
   background-color: red;
+}
+
+#red {
   float: left;
 }
 
 #blue {
-  width: 100px;
-  height: 100px;
-  background-color: blue;
   float: left;
 }
 
 #green {
-  width: 100px;
-  height: 100px;
-  background-color: green;
   clear: both;
 }
 
