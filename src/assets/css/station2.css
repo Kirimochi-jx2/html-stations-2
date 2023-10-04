@@ -18,21 +18,23 @@
   background-color: #3cb371;
 } */
 
-div {
+#red {
   width: 100px;
   height: 100px;
   background-color: red;
-}
-
-#red {
   float: left;
 }
 
 #blue {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
   float: left;
 }
 
 #green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
   clear: both;
 }
-
