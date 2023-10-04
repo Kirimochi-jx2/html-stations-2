@@ -7,6 +7,6 @@
   text-align: center;
 }
 
-p.center {
+p.center, div.center, span.center, a.center {
   text-align: left;
 }
