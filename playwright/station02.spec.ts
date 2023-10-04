@@ -1,8 +1,27 @@
 import { expect, test } from '@playwright/test'
 
-/**
- * # 「floatを使ってレイアウトを作ろう！」 - float
- */
+
+//  floatを使ってレイアウトを作ろう！」 - float
+#red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  float: left;
+}
+
+#blue {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  float: left;
+}
+
+#green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  clear: both;
+}
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/station2.html')
