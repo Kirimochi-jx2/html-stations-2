@@ -43,7 +43,7 @@
    #container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100px 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
     grid-template-areas:
       "header header header"
       "item1 item2 item3"
