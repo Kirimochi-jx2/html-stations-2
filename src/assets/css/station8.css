@@ -16,18 +16,6 @@
 
 .item１ { grid-area: item１; }
 
-.アイテム {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "item2 item2 item2"
-    "item３ item３ item３"
-    "item4 item4 item4";
-  grid-area: item1;
-}
-
 .item2 { grid-area: item2; }
 
 .item３ { grid-area: item３; }
