@@ -1,44 +1,54 @@
 #container {
-    display: grid; /*display: grid;はグリッドコンテナを作成する*/
-    /*5つの列を作成する*/
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    /*1つの行を作成する*/
-    grid-template-rows: 1fr;
-    grid-template-areas: /*grid-template-areasプロパティは、グリッドアイテムを配置するためのグリッドレイアウトを定義する*/
-      "header header header" /*headerはheaderエリアに配置*/
-      "item1 item2 item3" /*item1はitem1エリアに配置*/ /*item2はitem2エリアに配置*/ /*item3はitem3エリアに配置*/
-      "item4 item4 footer"; /*item4はitem4エリアに配置*/ /*footerはfooterエリアに配置*/
-    gap: 10px; /*grid-gapプロパティは、グリッドアイテムの間隔を指定する*/
-    height: 100vh; /*height: 100vh;は、ビューポートの高さに合わせて要素の高さを設定する*/
-  }
-  
-  header {
-    grid-area: header; /*grid-areaプロパティは、グリッドアイテムを配置するためのグリッドレイアウトを定義する*/
-    background-color: #f0f0f0; /*background-colorプロパティは、背景色を指定する*/
-  }
-  
-  .item1 {
-    grid-area: item1;
-    background-color: #ffcccc;
-  }
-  
-  .item2 {
-    grid-area: item2;
-    background-color: #ccffcc;
-  }
-  
-  .item3 {
-    grid-area: item3;
-    background-color: #ccccff;
-  }
-  
-  .item4 {
-    grid-area: item4;
-    background-color: #ffffcc;
-  }
-  
-  footer {
-    grid-area: footer;
-    background-color: #f0f0f0;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "item1 item2 item3"
+    "item4 item4 footer";
+  gap: 10px;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: #f0f0f0;
+}
+
+.item1 {
+  grid-area: item1;
+  background-color: #ffcccc;
+  width: 200px;
+  height: 200px;
+}
+
+.item2 {
+  grid-area: item2;
+  background-color: #ccffcc;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+}
+
+.item3 {
+  grid-area: item3;
+  background-color: #ccccff;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+}
+
+.item4 {
+  grid-area: item4;
+  background-color: #ffffcc;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 100px;
+}
