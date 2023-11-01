@@ -42,4 +42,4 @@ test('アイテム4が指定の位置にある', async ({ page }) => {
   const item4 = await page.getByText('アイテム4')
   await expect(item4).toHaveCSS('grid-row', '4 / 5')
   await expect(item4).toHaveCSS('grid-column', '2 / 3')
-})
+}) 

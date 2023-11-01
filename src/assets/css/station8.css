@@ -15,4 +15,5 @@
 .header {
   grid-area: header; /* headerをheaderエリアに配置 */
   background-color: #f0f0f0;
+  grid-row: 1;
 }
