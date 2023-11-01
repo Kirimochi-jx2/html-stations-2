@@ -4,39 +4,15 @@
   grid-template-rows:repeat(2, 1fr); /* 2行分の高さを1frで均等に分割 */
   grid-template-areas:
     "header header header" /* 1行目 */
-    "item1 item2 item3 item4" /* 2行目 */
-    "footer footer footer"; /* 3行目 */
+    "item1 item2 " /* 2行目 */
+    "item1 item3 " /* 3行目 */
+    "iteam1 item4 " /* 4行目 */
+    "footer footer footer"; /* 5行目 */
   gap: 10px; /* グリッドアイテム間の余白 */
   height: 100vh; /* 画面の高さいっぱいに表示 */
 }
 
-header {
+.header {
   grid-area: header; /* headerをheaderエリアに配置 */
   background-color: #f0f0f0;
 }
-
-.item1 {
-  grid-area: item1; /* item1をitem1エリアに配置 */
-  background-color: #f0f0f0;
-}
-
-.item2 {
-  grid-area: item2; /* item2をitem2エリアに配置 */
-  background-color: #f0f0f0;
-}
-
-.item3 {
-  grid-area: item3; /* item3をitem3エリアに配置 */
-  background-color: #f0f0f0;
-}
-
-.item4 {
-  grid-area: item4; /* item4をitem4エリアに配置 */
-  background-color: #f0f0f0;
-}
-
-footer {
-  grid-area: footer; /* footerをfooterエリアに配置 */
-  background-color: #f0f0f0;
-}
-
