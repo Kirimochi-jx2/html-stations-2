@@ -1,26 +1,22 @@
-#container {
+/* GridLayoutを用いて画像の様な配置になるcss */
+
+.container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 10px;
-  height: 100vh;
+  grid-template-columns: repeat(3, 1fr); /* 3列に分割 */
+  grid-template-rows: repeat(2, 1fr); /* 2行に分割 */
+  gap: 10px; /* グリッドアイテム間の隙間 */
 }
 
-header {
-  grid-area: header;
-  background-color: #f0f0f0;
+.item1 {
+  background-color: lightblue; /* グリッドアイテムの背景色 */
+  border: 1px solid black; /* グリッドアイテムの枠線 */
+  padding: 20px; /* グリッドアイテムの内側の余白 */
 }
 
-.item1, .item2, .item3, .item4 {
-  grid-area: item1;
-  background-color: #ffcccc;
-  width: 200px;
-  height: 200px;
+.grid-item:nth-child(1) {
+  grid-column: span 2; /* 最初のグリッドアイテムを2列分に拡張 */
 }
 
-footer {
-  grid-area: footer;
-  background-color: #f0f0f0;
-  width: 100%;
-  height: 100px;
+.grid-item:nth-child(4) {
+  grid-column: span 2; /* 四番目のグリッドアイテムを2列分に拡張 */
 }
