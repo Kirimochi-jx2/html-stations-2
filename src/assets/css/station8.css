@@ -1,22 +1,42 @@
-/* GridLayoutを用いて画像の様な配置になるcss */
-
-.container {
+#container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3列に分割 */
-  grid-template-rows: repeat(2, 1fr); /* 2行に分割 */
-  gap: 10px; /* グリッドアイテム間の隙間 */
+  grid-template-columns: repeat(3, 1fr); /* 3列分の幅を1frで均等に分割 */
+  grid-template-rows:repeat(2, 1fr); /* 2行分の高さを1frで均等に分割 */
+  grid-template-areas:
+    "header header header" /* 1行目 */
+    "item1 item2 item3 item4" /* 2行目 */
+    "footer footer footer"; /* 3行目 */
+  gap: 10px; /* グリッドアイテム間の余白 */
+  height: 100vh; /* 画面の高さいっぱいに表示 */
+}
+
+header {
+  grid-area: header; /* headerをheaderエリアに配置 */
+  background-color: #f0f0f0;
 }
 
 .item1 {
-  background-color: lightblue; /* グリッドアイテムの背景色 */
-  border: 1px solid black; /* グリッドアイテムの枠線 */
-  padding: 20px; /* グリッドアイテムの内側の余白 */
+  grid-area: item1; /* item1をitem1エリアに配置 */
+  background-color: #f0f0f0;
 }
 
-.grid-item:nth-child(1) {
-  grid-column: span 2; /* 最初のグリッドアイテムを2列分に拡張 */
+.item2 {
+  grid-area: item2; /* item2をitem2エリアに配置 */
+  background-color: #f0f0f0;
 }
 
-.grid-item:nth-child(4) {
-  grid-column: span 2; /* 四番目のグリッドアイテムを2列分に拡張 */
+.item3 {
+  grid-area: item3; /* item3をitem3エリアに配置 */
+  background-color: #f0f0f0;
 }
+
+.item4 {
+  grid-area: item4; /* item4をitem4エリアに配置 */
+  background-color: #f0f0f0;
+}
+
+footer {
+  grid-area: footer; /* footerをfooterエリアに配置 */
+  background-color: #f0f0f0;
+}
+
