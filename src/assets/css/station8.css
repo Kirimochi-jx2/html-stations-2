@@ -1,16 +1,16 @@
 .container {display: grid;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px; 
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 1fr 1fr;
   grid-template-areas:
     "header header ."
     "item1 item2."
     "item1 item3 ."
     "item1 item4 ."
     "footer footer .";
-}
+    gap: 10px;
+    height: 100vh;
+  }
 
 .header { grid-area: 1 / 1 / 2 / 6; }
 .item1 { grid-area: 2 / 1 / 5 / 2; }
