@@ -13,5 +13,5 @@
 }
 
 #header {
-  grid-template-areas: "header header";
+  grid-area: header; /*grid-area: header;はheaderをheaderに配置する*/
 }
