@@ -15,3 +15,23 @@
 #header {
   grid-area: header; /*grid-area: header;はheaderをheaderに配置する*/
 }
+
+#item1 {
+  grid-area: item1; /*grid-area: item1;はitem1をitem1に配置する*/
+}
+
+#item2 {
+  grid-area: item2; /*grid-area: item2;はitem2をitem2に配置する*/
+}
+
+#item3 {
+  grid-area: item3; /*grid-area: item3;はitem3をitem3に配置する*/
+}
+
+#item4 {
+  grid-area: item4; /*grid-area: item4;はitem4をitem4に配置する*/
+}
+
+#footer {
+  grid-area: footer; /*grid-area: footer;はfooterをfooterに配置する*/
+}
